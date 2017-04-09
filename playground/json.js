@@ -2,16 +2,12 @@
 //     name: 'Ferry'
 // };
 
-// //Convert object to string
+// // Object to JSON
 // var stringObj = JSON.stringify(obj);
 // console.log(typeof stringObj);
 // console.log(stringObj);
 
-// //Convert string back to object (or array)
-// var personString = '{"name": "Ferry","age": 40}';
-// var person = JSON.parse(personString);
-// console.log(typeof person);
-// console.log(person.name);
+// var
 
 
 const fs = require('fs');
@@ -21,12 +17,10 @@ var originalNote = {
     body: 'Some body'
 };
 
-originalNoteString = JSON.stringify(originalNote);
+var originalNoteString = JSON.stringify(originalNote);
 fs.writeFileSync('notes.json', originalNoteString);
 
 var noteString = fs.readFileSync('notes.json');
 var note = JSON.parse(noteString);
 console.log(typeof note);
-console.log(note.title);
-
-
+console.log(note);
